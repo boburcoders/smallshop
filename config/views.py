@@ -8,7 +8,6 @@ def index(request):
     object = Product.objects.all()
     last_five_products = Product.objects.order_by('-created_at')[:5]
     categories = Category.objects.all()
-    print(categories)
     context = {
         'object': object,
         'last_five_products': last_five_products
