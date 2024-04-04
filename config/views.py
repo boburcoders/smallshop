@@ -4,7 +4,6 @@ from config.models import Product, Category
 import requests
 
 
-# Create your views here.
 def index(request):
     object = Product.objects.all()
     last_five_products = Product.objects.order_by('-created_at')[:5]
@@ -41,7 +40,6 @@ def product_list(request):
     return render(request, 'product_list.html', context)
 
 
-# Function to send message to Telegram bot
 def send_message_to_bot(name, email, subject, message):
     token = "6920086919:AAGHwAVqmrYtLfrju8Q33tDD3hIMoWnvqyg"
     telegram_url = f"https://api.telegram.org/bot{token}/sendMessage"
