@@ -40,12 +40,12 @@ def product_list(request):
 
 
 def send_message_to_bot(name, email, subject, message):
-    token = "6920086919:AAGHwAVqmrYtLfrju8Q33tDD3hIMoWnvqyg"
+    token = "<BOT_TOKEN>"
     telegram_url = f"https://api.telegram.org/bot{token}/sendMessage"
 
-    Chat_id = '1365675028'
+    CHAT_ID = '<CHAT_ID>'
     params = {
-        'chat_id': Chat_id,
+        'chat_id': CHAT_ID,
         'text': f"New message from: {name}\n Email: {email}:\nSubject: {subject}\nMessage: {message}"
     }
 
